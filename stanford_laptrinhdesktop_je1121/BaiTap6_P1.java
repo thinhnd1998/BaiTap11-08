@@ -32,10 +32,8 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txtSoLanThucHien = new javax.swing.JTextField();
-        txtKetQuaDaySo = new javax.swing.JTextField();
+        txtKetQuaDaySo = new javax.swing.JLabel();
+        txtSoLanThucHien = new javax.swing.JLabel();
         txtGiaTriDaySo = new javax.swing.JTextField();
         cboKieuGiaTri = new javax.swing.JComboBox<>();
         btnXem = new javax.swing.JButton();
@@ -50,44 +48,29 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Kết quả"));
 
-        jLabel4.setText("+ Kết quả dãy số");
+        txtKetQuaDaySo.setText("+ Kết quả dãy số");
 
-        jLabel5.setText("+ Số lần thực hiện");
+        txtSoLanThucHien.setText("+ Số lần thực hiện");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel5)
-                        .addGap(49, 49, 49)
-                        .addComponent(txtSoLanThucHien))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(27, 27, 27)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 52, Short.MAX_VALUE)
-                        .addComponent(txtKetQuaDaySo, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(103, 103, 103))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtSoLanThucHien, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtKetQuaDaySo, javax.swing.GroupLayout.PREFERRED_SIZE, 454, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(txtSoLanThucHien, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel4)
-                        .addContainerGap(59, Short.MAX_VALUE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(txtKetQuaDaySo)
-                        .addContainerGap())))
+                .addGap(26, 26, 26)
+                .addComponent(txtSoLanThucHien)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(txtKetQuaDaySo)
+                .addGap(40, 40, 40))
         );
 
         cboKieuGiaTri.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Chẵn", "Lẻ" }));
@@ -104,23 +87,19 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txtGiaTriDaySo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(txtGiaTriDaySo, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnXem, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(cboKieuGiaTri, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(70, Short.MAX_VALUE))
+                        .addComponent(btnXem, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cboKieuGiaTri, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(181, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,9 +113,9 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(cboKieuGiaTri, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -162,34 +141,32 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
     private void btnXemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnXemActionPerformed
         // TODO add your handling code here:
         Scanner sc = new Scanner(System.in);
-        
-        String giaTri = "",  strKieuGiaTri = "", strSoLanThucHien = "", strKetQuaDaySo = "";
-        int giaTri1 = 0, i = 0, j = 1;
-        
+
+        String giaTri = "", strKieuGiaTri = "", strSoLanThucHien = "", strKetQuaDaySo = "";
+        int giaTri1 = 0, i = 0, j = 1, soLanThucHien = 0;
+
         giaTri = txtGiaTriDaySo.getText();
         strKieuGiaTri = "" + cboKieuGiaTri.getSelectedItem();
         giaTri1 = Integer.parseInt(giaTri);
-        
-       if(strKieuGiaTri.equals("Chẵn")) {
+
+        if (strKieuGiaTri.equals("Chẵn")) {
             do {
                 strKetQuaDaySo += i + " ";
-            i+= 2;
-            }
-            while (i <= giaTri1);
-            
-        
-        }   
-        if(strKieuGiaTri.equals("Lẻ")) {
+                i += 2;
+                soLanThucHien++;
+            } while (i <= giaTri1);
+
+        }
+        if (strKieuGiaTri.equals("Lẻ")) {
             do {
                 strKetQuaDaySo += j + " ";
-            j+= 2;
-            }
-            while (j <= giaTri1);
-            
-           
-            
+                j += 2;
+                soLanThucHien++;
+            } while (j <= giaTri1);
+
         }
-             txtKetQuaDaySo.setText(strKetQuaDaySo);
+        txtSoLanThucHien.setText(strSoLanThucHien);
+        txtKetQuaDaySo.setText(strKetQuaDaySo);
         
         
     }//GEN-LAST:event_btnXemActionPerformed
@@ -224,7 +201,7 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BaiTap6_P1().setVisible(true);
+                new BaiTap6_P1().setVisible(true);               
             }
         });
     }
@@ -234,12 +211,10 @@ public class BaiTap6_P1 extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cboKieuGiaTri;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField txtGiaTriDaySo;
-    private javax.swing.JTextField txtKetQuaDaySo;
-    private javax.swing.JTextField txtSoLanThucHien;
+    private javax.swing.JLabel txtKetQuaDaySo;
+    private javax.swing.JLabel txtSoLanThucHien;
     // End of variables declaration//GEN-END:variables
 }

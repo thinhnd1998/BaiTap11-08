@@ -4,6 +4,8 @@
  */
 package stanford_laptrinhdesktop_je1121;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author MrT
@@ -122,33 +124,74 @@ public class BaiTap5_P1 extends javax.swing.JFrame {
         
         //khai báo biến
         
+        //cách 1
+//        String GiaTri = "", strKieu = "", strKetQua = "";
+//
+//        int giaTri1 = 0, i = 0, j = 1;       
+//        GiaTri = txtGiaTri.getText();
+//        strKieu = "" + cboKieu.getSelectedItem();
+//        giaTri1 = Integer.parseInt(GiaTri);
+//
+//        if (strKieu.equals("Chẵn")) {
+//            do {
+//                strKetQua += i + "-";
+//                i += 2;
+//            } while (i <= giaTri1);
+//
+//        }
+//        if (strKieu.equals("Lẻ")) {
+//            while (j <= giaTri1) {
+//                strKetQua += j + "-";
+//                j += 2;
+//            }
+//        }
+//        strKetQua = strKetQua.substring(0, strKetQua.length() -1);
         
-        String giaTri = "", strKieu = "", strKetQua = "";
-        
-        int giaTri1 = 0, i = 0, j = 1;
-        
-        giaTri = txtGiaTri.getText();
+        //cách 2
+        //Khai báo biến
+        String strGiaTri = "", strKieu = "", strKetQua = "";
+        int giaTri = 0;
+        //Lấy thông tin từ trên giao diện
+        strGiaTri = txtGiaTri.getText();
         strKieu = "" + cboKieu.getSelectedItem();
-        giaTri1 = Integer.parseInt(giaTri);
-        
-        if(strKieu.equals("Chẵn")) {
-            do {
-                strKetQua += i + " ";
-            i+= 2;
+        //Chuyển về dạng số
+        try {
+            giaTri = Integer.parseInt(strGiaTri);
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(rootPane, "Bạn cần phải nhập giá trị là kiểu số nguyên");
+            txtGiaTri.requestFocus();
+            System.err.println("Có lỗi trong quá trình chuyển đổi sang kiểu số. Chi tiết: " + e.getMessage());
+             return;
+        }
+        //Sử dụng vòng lặp while
+        int i = 0;
+        while(i <= giaTri)
+        {
+            if(strKieu.equals("Chẵn"))
+            {
+                if(i%2 == 0)
+                {
+                    strKetQua += i + "-";
+                }
             }
-            while (i <= giaTri1);
-            
-        
-        }   
-        if(strKieu.equals("Lẻ")) {
-            while (j <= giaTri1){
-            strKetQua += j + " ";
-            j+= 2;
+            else
+            {
+                if(strKieu.equals("Lẻ"))
+                {
+                    if(i%2 != 0)
+                    {
+                        strKetQua += i + "-";
+                    }
+                }
+            }
+            i++;
         }
-        }
-        
-            
+        //Cắt hay loại bỏ kí tự cuối chuỗi
+        strKetQua = strKetQua.substring(0, strKetQua.length()-1);
+        //Hiển thị kết quả
         txtKetQua.setText(strKetQua);
+            
+       
         
                 
         
